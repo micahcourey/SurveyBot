@@ -1,4 +1,4 @@
-surveyBot.controller('ResponsesCtrl', function ResponsesCtrl($scope, QuestionsFactory.js) {
+surveyBot.controller('ResponsesCtrl', function ResponsesCtrl($scope, QuestionsFactory) {
   $scope.responses = QuestionsFactory.responses;
   $scope.QuestionsFactory = QuestionsFactory;
 });
