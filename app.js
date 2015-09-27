@@ -37,7 +37,7 @@ surveyBot.config(function($stateProvider, $urlRouterProvider) {
       },
       'body': {
         templateUrl: "partials/survey.html",
-        controller: "ResponsesCtrl"
+        controller: "QuestionsCtrl"
       }
     }
   });

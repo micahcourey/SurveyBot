@@ -1,0 +1,10 @@
+<div class="row" ng-show="questions.length">
+  <h3>Please complete the survey</h3>
+  <ol>
+    <li ng-repeat="item in questions">
+      <span>
+        {{ item.question }}
+      </span>
+    </li>
+  </ol>
+</div>
