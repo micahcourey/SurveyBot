@@ -1,21 +1,19 @@
-<div ng-controller="QuestionsCtrl">
-  <div class="row" ng-show="questions.length">
-    <div class="col-md-12">
-      <ul>
-        <li ng-repeat="item in questions">
-          <span>
-            {{ item.question }}
-          </span>
-        </li>
-      </ul>
-      <h2 ng-show="questions.length">Questions</h2>
-      <h4>Add a question</h4>
-      <form ng-submit="QuestionsFactory.addQuestion()" class="form-inline" role="form">
-        <div class="form-group">
-          <input type="text" ng-model="QuestionsFactory.question" class="form-control" placeholder="Enter a question">
-        </div>
-        <button type="submit" class="btn btn-primary">Add Question</button>
-      </form>
+<div>
+  <h4>Add a question</h4>
+  <form ng-submit="QuestionsFactory.addQuestion()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="QuestionsFactory.question" class="form-control" placeholder="Enter a question">
     </div>
-  </div>
+    <button type="submit" class="btn btn-primary">Add Question</button>
+  </form>
+</div>
+<div class="row" ng-show="questions.length">
+  <h4>Questions</h4>
+  <ol>
+    <li ng-repeat="item in questions">
+      <span>
+        {{ item.question }}
+      </span>
+    </li>
+  </ol>
 </div>

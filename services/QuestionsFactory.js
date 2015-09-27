@@ -4,8 +4,7 @@ surveyBot.factory('QuestionsFactory', function QuestionsFactory() {
   factory.responses = [];
 
   factory.addQuestion = function() {
-    var question = { question: factory.question };
-    factory.questions.push(question);
+    factory.questions.push({ question: factory.question });
     factory.question = null;
   };
 
@@ -14,4 +13,6 @@ surveyBot.factory('QuestionsFactory', function QuestionsFactory() {
     factory.responses.push(responses);
     factory.responses = null;
   };
+
+  return factory;
 });
