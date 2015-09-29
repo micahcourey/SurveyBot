@@ -8,7 +8,7 @@ surveyBot.controller('ResponsesCtrl', function ResponsesCtrl($scope, QuestionsFa
   };
 });
 
-courseRoster.controller("StudentCtrl", function ($scope) {
+surveyBot.controller("ResponsesCtrl", function ($scope) {
   $scope.addResponse = function(questionResponse) {
     $scope.question.responses.push({ response: questionResponse });
     $scope.questionResponse = null;

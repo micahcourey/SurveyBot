@@ -7,13 +7,21 @@
     <button type="submit" class="btn btn-primary">Add Question</button>
   </form>
 </div>
-<div class="row" ng-show="questions.length">
-  <h4>Questions</h4>
+<div ng-show="questions.length">
+  <h3>Questions</h3>
   <ol>
     <li ng-repeat="item in questions">
       <span>
         {{ item.question }}
       </span>
+    </li>
+  </ol>
+</div>
+<div ng-show="question.responses.length">
+  <h3>Responses to your survey questions</h3>
+  <ol>
+    <li ng-repeat="item in question.responses">
+      {{ item.response }}
     </li>
   </ol>
 </div>
