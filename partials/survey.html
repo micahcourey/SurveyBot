@@ -1,10 +1,14 @@
 <div class="row" ng-show="questions.length">
   <h3>Please complete the survey</h3>
-  <ol>
-    <li ng-repeat="item in questions">
-      <span>
-        {{ item.question }}
-      </span>
-    </li>
-  </ol>
+  <form ng-submit="addResponse()" class="form-inline" role="form">
+    <ol>
+      <li ng-repeat="item in questions">
+        <span>
+          {{ item.question }}
+          <input type="text" ng-model="questionResponse" class="form-control">
+        </span>
+      </li>
+    </ol>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
 </div>
